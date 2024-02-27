@@ -29,6 +29,3 @@ The tool caters to a diverse audience, including:
 - Non-governmental organizations (NGOs) and advocacy groups advocating for climate action and sustainability.
 - Businesses and industries seeking to adopt sustainable practices and reduce their carbon footprint.
 - Communities and citizens interested in participating in local climate initiatives and resilience-building efforts.
-
-## Conclusion
-In conclusion, the Climate Mitigation Strategy Decision Support Tool serves as a valuable resource for navigating the complex landscape of climate mitigation. By providing data-driven insights, scenario analysis, impact assessments, and decision support tools, the tool empowers stakeholders to make informed decisions and take effective actions towards a more sustainable and resilient future in the face of climate change.
