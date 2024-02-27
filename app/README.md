@@ -39,3 +39,6 @@ This Flask application allows users to upload a CSV file containing data, genera
 The output of the application is the correlation matrix image displayed in the `index.html` template.
 "availabe at output\correlation_matrix_image.png"
 
+## Dataset
+A sample data set is gernerated by ChatGPT 
+the file is availabe at 

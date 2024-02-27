@@ -1,0 +1,6 @@
+Forest_Area,Temperature,CO2_Fixability,Area_Hectares,Photoperiodism_Hours,Pollution_Level,Soil_pH,Annual_Supply_Tons,Locality_Supply,Seasonal_Supply_Variation,Pricing_USD,CO2_Fixation_Deficit,Latitude,Longitude,Socioeconomic_Impact,Groundwater_Impact,CO2_Capture_Storage
+Area_1,15.6,25000,5000,12,20,6.5,10000,High,Moderate,50,5000,40.7128,-74.0060,High,Low,30000
+Area_2,20.3,32000,7000,14,25,6.8,12000,Medium,High,60,4000,34.0522,-118.2437,Moderate,Moderate,35000
+Area_3,18.9,28000,6000,13,22,6.3,11000,Low,Low,45,6000,41.8781,-87.6298,Low,High,32000
+Area_4,16.5,30000,5500,11,18,6.7,10500,Medium,Moderate,55,5500,51.5074,-0.1278,Moderate,Low,33000
+Area_5,19.8,27000,6500,12,21,6.6,11500,High,High,65,4500,35.6895,139.6917,High,Moderate,31000
