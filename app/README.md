@@ -35,4 +35,5 @@ This Flask application allows users to upload a CSV file containing data, genera
 ## File Structure
 
 - `templates/`: Contains HTML templates used by Flask.
-
+# working 
+this product/tool is stil incomplete and has a lot to work on 
