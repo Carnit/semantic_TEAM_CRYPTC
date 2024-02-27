@@ -7,7 +7,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import os
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), "D:\\semantic_research\\templates"))
 
 def generate_correlation_matrix_image(data):
     if data.isnull().sum().sum() > 0:
