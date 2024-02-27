@@ -38,4 +38,3 @@ This Flask application allows users to upload a CSV file containing data, genera
 # working 
 this product/tool is stil incomplete and has a lot to work on, but results we got is suprising 
 
-![Correllation matrix Image](D:/semantic_research/output/correlation_matrix_image.png)
