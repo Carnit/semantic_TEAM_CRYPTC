@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Logo</title>
+    <style>
+        .eye {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .eye:before {
+            content: 'i';
+            font-family: Arial, sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: #f00;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .eye:after {
+            content: '';
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
+
+        .yellow-eye {
+            background-color: #ffc600;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .yellow-eye:before {
+            content: 'i';
+            font-family: Arial, sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: #f00;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .yellow-eye:after {
+            content: '';
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="eye"></div>
+    <div class="yellow-eye"></div>
+</body>
+</html>

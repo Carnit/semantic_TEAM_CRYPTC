@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>Correlation Matrix Image</title>
+</head>
+<body>
+    <h2>Upload a CSV file</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Generate Correlation Matrix Image">
+    </form>
+    {% if correlation_image %}
+    <h2>Correlation Matrix</h2>
+    <img src="data:image/png;base64,{{ correlation_image }}" alt="Correlation Matrix">
+    {% endif %}
+</body>
+</html>
