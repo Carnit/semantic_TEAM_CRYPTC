@@ -2,7 +2,7 @@
 
 This Flask application allows users to upload a CSV file containing data, generates a correlation matrix for the data, and displays the correlation matrix as a heatmap using Seaborn. 
 ## Python Requirments
--`Python 3.6.0 and more`
+- `Python 3.6.0 and more`
 ## Library Requirements
 - `pandas` for data manipulation
 - `Flask` for web framework
