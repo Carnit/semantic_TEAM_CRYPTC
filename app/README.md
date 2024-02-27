@@ -1,14 +1,16 @@
 # Flask Application for Correlation Matrix Visualization
 
 This Flask application allows users to upload a CSV file containing data, generates a correlation matrix for the data, and displays the correlation matrix as a heatmap using Seaborn. 
-## Python Requirments
-- `Python 3.6.0 and more`
+
+## Python Requirements
+- Python 3.6.0 and above
+
 ## Library Requirements
-- `pandas` for data manipulation
-- `Flask` for web framework
-- `matplotlib` and `seaborn` for plotting
-- `base64` for encoding images
-- `os` for file operations
+- pandas for data manipulation
+- Flask for web framework
+- matplotlib and seaborn for plotting
+- base64 for encoding images
+- os for file operations
 
 ## Setup
 
@@ -32,9 +34,8 @@ This Flask application allows users to upload a CSV file containing data, genera
 
 - If the script is executed directly (`__name__ == '__main__'`), the Flask app runs in debug mode.
 
-## File Structure
+## Output
 
-- `templates/`: Contains HTML templates used by Flask.
-# working 
-this product/tool is stil incomplete and has a lot to work on, but results we got is suprising 
+The output of the application is the correlation matrix image displayed in the `index.html` template.
+"availabe at output\correlation_matrix_image.png"
 
