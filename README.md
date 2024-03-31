@@ -1,4 +1,4 @@
-# Climate Mitigation Strategy Decision Support Tool
+# CRYPT Tool
 
 ## Introduction
 The Climate Mitigation Strategy Decision Support Tool is a powerful resource designed to assist policymakers, researchers, and stakeholders in making informed decisions regarding climate mitigation strategies. As the world faces the pressing challenge of climate change, the need for effective strategies to reduce greenhouse gas emissions and mitigate its impacts has never been more critical. This tool aims to provide valuable insights and guidance to navigate the complex landscape of climate mitigation.
