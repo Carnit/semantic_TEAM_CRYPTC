@@ -31,7 +31,7 @@ def generate_correlation_matrix_image(data):
         )
 
     try:
-        fig, ax = plt.subplots(figsize=(10, 8))
+        fig, ax = plt.subplots(figsize=(8, 6))
         sns.heatmap(data.corr(), annot=True, cmap="coolwarm", ax=ax)
         ax.set_title("Correlation Matrix for All Columns")
 
