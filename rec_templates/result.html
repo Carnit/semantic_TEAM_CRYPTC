@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Recommendation Result</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1>Plant Recommendation Result</h1>
+    {% if recommendations %}
+    <h2>Recommended Plants:</h2>
+    <ul>
+        {% for plant in recommendations %}
+        <li>
+            <strong>Common Name:</strong> {{ plant.common_name }}<br>
+            <strong>Scientific Name:</strong> {{ plant.scientific_name }}<br>
+            <strong>Family:</strong> {{ plant.family }}<br>
+            <strong>Native Status:</strong> {{ plant.native_status }}<br>
+            <!-- Add more attributes as needed -->
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No recommendations found.</p>
+    {% endif %}
+
+    <h2>Comparison with Normal Trends</h2>
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <script>
+        // Extract user input and normal trends from Flask template
+        var user_input = {
+            location: "{{ location }}",
+            temperature: "{{ temperature }}",
+            sun_hours: "{{ sun_hours }}",
+            date: "{{ date }}",
+            soil_ph: "{{ soil_ph }}",
+            soil_type: "{{ soil_type }}",
+            area: "{{ area }}"
+        };
+
+        var normal_trends = {
+            temperature: 20,  // Example normal temperature
+            sun_hours: 360,   // Example normal sun hours
+            soil_ph: 6.5      // Example normal soil pH
+            // Add more normal trends as needed
+        };
+
+        // Make AJAX request to /chart route to get chart data
+        fetch('/chart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ user_input: user_input, normal_trends: normal_trends })
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Render chart using Chart.js
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: data.labels,
+                        datasets: [{
+                            label: 'Deviation from Normal Trends',
+                            data: data.values,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+
+</html>

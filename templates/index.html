@@ -1,17 +1,31 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Correlation Matrix Image</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correlation Matrix and Line Graph</title>
 </head>
+
 <body>
-    <h2>Upload a CSV file</h2>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <input type="submit" value="Generate Correlation Matrix Image">
-    </form>
+    <h1>Correlation Matrix</h1>
     {% if correlation_image %}
-    <h2>Correlation Matrix</h2>
     <img src="data:image/png;base64,{{ correlation_image }}" alt="Correlation Matrix">
+    {% else %}
+    <p>{{ correlation_error }}</p>
     {% endif %}
+
+    <h1>Line Graph</h1>
+    {% if line_graph_image %}
+    <img src="data:image/png;base64,{{ line_graph_image }}" alt="Line Graph">
+    {% else %}
+    <p>{{ line_graph_error }}</p>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
 </body>
+
 </html>
