@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1>Plant Data</h1>
+    <canvas id="plantChart" width="800" height="400"></canvas>
+
+    <script>
+        // Get the plant data passed from the Flask route
+        var plantsData = { plants_data };
+
+        // Extract the required data for the chart
+        var familyCounts = {};
+        plantsData.forEach(function (plant) {
+            if (plant.family in familyCounts) {
+                familyCounts[plant.family]++;
+            } else {
+                familyCounts[plant.family] = 1;
+            }
+        });
+
+        // Create data for the chart
+        var chartData = {
+            labels: Object.keys(familyCounts),
+            datasets: [{
+                label: 'Number of Plants',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                data: Object.values(familyCounts),
+            }]
+        };
+
+        // Create and render the bar chart
+        var ctx = document.getElementById('plantChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,11 +1,13 @@
 # Flask Application for Correlation Matrix Visualization
 
-This Flask application allows users to upload a CSV file containing data, generates a correlation matrix for the data, and displays the correlation matrix as a heatmap using Seaborn. 
+This Flask application allows users to upload a CSV file containing data, generates a correlation matrix for the data, and displays the correlation matrix as a heatmap using Seaborn.
 
 ## Python Requirements
+
 - Python 3.6.0 and above
 
 ## Library Requirements
+
 - pandas for data manipulation
 - Flask for web framework
 - matplotlib and seaborn for plotting
@@ -25,10 +27,13 @@ This Flask application allows users to upload a CSV file containing data, genera
 
 ## Routes
 
-- `/`: The index route handles both GET and POST requests. 
-    - If a POST request is received with a CSV file, it reads the file, generates a correlation matrix image, and renders the `index.html` template with the correlation matrix image.
-    - If the uploaded file is not a CSV or an error occurs during processing, it redirects to the index page.
-    - If a GET request is received, it renders the `index.html` template.
+- `/`: The index route handles both GET and POST requests.
+
+- If a POST request is received with a CSV file, it reads the file, generates a correlation matrix image, and renders the `index.html` template with the correlation matrix image.
+
+- If the uploaded file is not a CSV or an error occurs during processing, it redirects to the index page.
+
+- If a GET request is received, it renders the `index.html` template.
 
 ## Running the Application
 
@@ -40,5 +45,6 @@ The output of the application is the correlation matrix image displayed in the `
 "availabe at output\correlation_matrix_image.png"
 
 ## Dataset
-A sample data set is gernerated by ChatGPT 
-the file is availabe at "input\test.csv"
+
+A sample data set is gernerated by ChatGPT
+the file is availabe at " input\test.csv "
